@@ -21,5 +21,5 @@
 (deftest test-diff
   (is (=
        {:to-add [3], :to-remove [1], :to-update [2]}
-       (diff [{:id 2, :name "foo"} {:id 3, :name "baz"}]
-             [{:id 1, :name "qux"} {:id 2, :name "bar"}]))))
+       (diff [{:id 0, :name "fred"} {:id 2, :name "foo"} {:id 3, :name "baz"}]
+             [{:id 0, :name "fred"} {:id 1, :name "qux"} {:id 2, :name "bar"}]))))
