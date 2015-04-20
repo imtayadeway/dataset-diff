@@ -1,5 +1,5 @@
 (ns dataset-diff.core)
-(require 'clojure.set)
+(use 'clojure.set)
 
 (defn set-of-ids
   "Get the set of ids from a dataset"
@@ -9,7 +9,7 @@
 (defn id-difference
   "Get a vector of ids from set 1 that are not in set 2"
   [ds1 ds2]
-  (vec (apply clojure.set/difference (map set-of-ids [ds1 ds2]))))
+  (vec (apply difference (map set-of-ids [ds1 ds2]))))
 
 (defn rows-match?
   "Determines if two rows (i.e. two maps) are identical"
